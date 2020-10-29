@@ -24,6 +24,17 @@
 <input type="text" name="pan" required/>
 </div>
 <div>
+<label>Mobile</label>
+<input type="number" name="mobile" required/>
+</div>
+<label>Choose UserID</label>
+<input type="text" name="uid" required/>
+</div>
+</div>
+<label>Choose Password</label>
+<input type="text" name="pwd" required/>
+</div>
+<div>
 <h1></h1>
 <button>Register</button>
 <button>Cancel</button>

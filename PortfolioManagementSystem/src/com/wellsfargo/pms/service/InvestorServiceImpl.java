@@ -1,11 +1,11 @@
 package com.wellsfargo.pms.service;
 
-import com.wellsfargo.pms.model.InvestorDetails;
+import com.wellsfargo.pms.model.InvestorloginDetails;
 
 public class InvestorServiceImpl implements IInvestorService{
 
 	@Override
-	public InvestorDetails verifyLogin(InvestorDetails investorDetails) {
+	public InvestorloginDetails verifyLogin(InvestorloginDetails investorDetails) {
 		if(investorDetails!=null) {
 			
 		}
@@ -13,7 +13,7 @@ public class InvestorServiceImpl implements IInvestorService{
 	}
 
 	@Override
-	public InvestorDetails verifyDoubleRegistration(InvestorDetails investorDetails) {
+	public InvestorloginDetails verifyDoubleRegistration(InvestorloginDetails investorDetails) {
 		// TODO Auto-generated method stub
 		return investorDetails;
 	}

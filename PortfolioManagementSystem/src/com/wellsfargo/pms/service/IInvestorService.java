@@ -1,9 +1,9 @@
 package com.wellsfargo.pms.service;
 
-import com.wellsfargo.pms.model.InvestorDetails;
+import com.wellsfargo.pms.model.InvestorloginDetails;
 
 public interface IInvestorService {
-	InvestorDetails verifyLogin(InvestorDetails investorDetails);
-	InvestorDetails verifyDoubleRegistration(InvestorDetails investorDetails);
+	InvestorloginDetails verifyLogin(InvestorloginDetails investorDetails);
+	InvestorloginDetails verifyDoubleRegistration(InvestorloginDetails investorDetails);
 
 }

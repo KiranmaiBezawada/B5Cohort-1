@@ -5,9 +5,9 @@
 <h1>Welcome</h1>
 <form action="PortfolioDashboard" method="post">
 <p>
-<h2>Amount invested:Rs.3,24,42,323</h2>
+<h2>Amount invested: Rs 4,42,323</h2>
 <span> </span>
-<h2>Today's Profit: RS. 1432</h2>
+<h2>Today's Profit: RS. 1,432</h2>
 <span> </span>
 </p>
 <h3><a href="summary.jsp">Summary</a></h3>
