@@ -2,7 +2,11 @@
 <head>
 <title>PortfolioDashboard</title></head>
 <body>
+<%@page import="java.time.LocalDateTime"%>
+	<h1 style="background-color:powderblue;">Portfolio Mangement System</h1>
+    <h2><%=LocalDateTime.now() %></h2>
 <h1>Welcome</h1>
+<h4><a href="index.jsp">Home</a></h4>
 <form action="PortfolioDashboard" method="post">
 <p>
 <h2>Amount invested: Rs 4,42,323</h2>

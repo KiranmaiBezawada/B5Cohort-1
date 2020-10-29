@@ -1,10 +1,13 @@
 <html>
 <head>
 <title>Commodity</title>
+<%@page import="java.time.LocalDateTime"%>
+	<h1 style="background-color:powderblue;">Portfolio Mangement System</h1>
+    <h2><%=LocalDateTime.now() %></h2>
 <h2>
 welcome to commodity market 
 </h2>
-<h4><a href="welcome.jsp">Home</a></h4>
+<h4><a href="index.jsp">Home</a></h4>
 <form action="commodities"  method="post">
 <h1>Gold</h1>
 <h2>Current Price :</h2>

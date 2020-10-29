@@ -5,11 +5,7 @@ import java.util.List;
 public class CompanyDetails {
 	private List ListedCompanyIPO;
 	private Integer CompanyCode;
-	private String CompanyTitle;
-	public CompanyDetails() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
+	private String CompanyTitle;	
 	private String Operations;
 	private long ShareCount; 
 	private Integer OpenSharePrice;
@@ -19,6 +15,10 @@ public class CompanyDetails {
 			long shareCount, Integer openSharePrice, String sector, long turnover) {
 		super();
 		
+	}
+	public CompanyDetails() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	public List getListedCompanyIPO() {
 		return ListedCompanyIPO;
