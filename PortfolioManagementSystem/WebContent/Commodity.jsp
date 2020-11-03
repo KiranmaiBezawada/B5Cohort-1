@@ -7,7 +7,11 @@
 <h2>
 welcome to commodity market 
 </h2>
-<h4><a href="index.jsp">Home</a></h4>
+<span>|</span>
+<a href="portfolioDashboard_display.jsp">Home</a>
+<span>|</span>
+<a href="index.jsp">Logout</a>
+<span>|</span>
 <form action="commodities"  method="post">
 <h1>Gold</h1>
 <h2>Current Price :</h2>

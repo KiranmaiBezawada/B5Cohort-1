@@ -13,8 +13,7 @@ public class CompanyDetails {
 	private long Turnover;
 	public CompanyDetails(List listedCompanyIPO, Integer companyCode, String companyTitle, String operations,
 			long shareCount, Integer openSharePrice, String sector, long turnover) {
-		super();
-		
+		super();		
 	}
 	public CompanyDetails() {
 		super();

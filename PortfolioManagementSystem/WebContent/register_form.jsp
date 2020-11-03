@@ -7,8 +7,8 @@
 	<h1 style="background-color:powderblue;">Portfolio Mangement System</h1>
     <h2><%=LocalDateTime.now() %></h2>
 <h1>Welcome</h1>
-<h4><a href="welcome.jsp">Home</a></h4>
-<form action="InvestorDetailsController" method="post">
+<h4><a href="index.jsp">Home</a></h4>
+<form action="/investorRegister" method="post">
 <div>
 <label>Firstname:</label>
 <input type="text" name="firstname" required/>

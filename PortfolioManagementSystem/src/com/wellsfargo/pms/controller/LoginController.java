@@ -13,8 +13,8 @@ import com.wellsfargo.pms.service.IInvestorService;
 import com.wellsfargo.pms.service.InvestorServiceImpl;
 
 
-@WebServlet("/InvestorDetails")
-public class InvestorDetailsController extends HttpServlet {
+@WebServlet({"/investorRegister","/investerLogin","/backOffficUserLogin","/adminLogin"})
+public class LoginController extends HttpServlet {
 	private IInvestorService iinvestorservice;
 
 	public void init(ServletConfig config) throws ServletException{

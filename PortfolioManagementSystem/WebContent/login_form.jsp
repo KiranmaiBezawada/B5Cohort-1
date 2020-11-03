@@ -8,7 +8,7 @@
     <h2><%=LocalDateTime.now() %></h2>
 <h1>Welcome</h1>
 <h4><a href="index.jsp">Home</a></h4>
-<form action="InvestorDetails" method="post">
+<form action="/investerLogin" method="post">
 <div>
 <label>Username:</label>
 <input type="text" name="username" required/>
