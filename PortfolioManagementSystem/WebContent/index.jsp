@@ -10,10 +10,10 @@
     <jsp:include page="menu.jsp"/>
     
 	<h3><p style="color:blue">Online Share Trading and Investment Platform.
-	Welcome bonus Rs. 2500 on new registration.
 	Start trading at simplified pricing.
 	  No hidden charges.
 	   Avail the real-time expert advise.
 	</p></h3>
+	<h2><p style="color:green">Welcome bonus Rs. 2500 on new registration</p></h2>
 	
 		</body></html>

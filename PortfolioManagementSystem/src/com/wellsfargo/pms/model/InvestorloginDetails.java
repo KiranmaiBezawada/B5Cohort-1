@@ -5,8 +5,8 @@ import java.util.Date;
 public class InvestorloginDetails {
 	private String username;
 	private String password;
-	private String firstname;
-	private String lastname;
+	private String firstName;
+	private String lastName;
 	private String pan;
 	private Integer mobile;
 	private String uid ;
@@ -50,16 +50,16 @@ public class InvestorloginDetails {
 		this.password = password;
 	}
 	public String getFirstname() {
-		return firstname;
+		return firstName;
 	}
 	public void setFirstname(String firstname) {
-		this.firstname = firstname;
+		this.firstName = firstname;
 	}
 	public String getLastname() {
-		return lastname;
+		return lastName;
 	}
 	public void setLastname(String lastname) {
-		this.lastname = lastname;
+		this.lastName = lastname;
 	}
 	public String getPan() {
 		return pan;
@@ -77,8 +77,8 @@ public class InvestorloginDetails {
 		super();
 		this.username = username;
 		this.password = password;
-		this.firstname = firstname;
-		this.lastname = lastname;
+		this.firstName = firstname;
+		this.lastName = lastname;
 		this.pan = pan;
 		this.dob = dob;
 	}

@@ -11,4 +11,4 @@
 <a href="portfolioDashboard_display.jsp">Home</a>
 <span>|</span>
 <a href="index.jsp">Logout</a>
-<form action="/summary" method="post"></form></body></html>
+<form action="summary" method="post"></form></body></html>
