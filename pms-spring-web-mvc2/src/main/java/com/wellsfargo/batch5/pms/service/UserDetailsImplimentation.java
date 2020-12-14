@@ -1,11 +1,14 @@
 package com.wellsfargo.batch5.pms.service;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 
 import com.wellsfargo.batch5.pms.dto.UserDetailsDto;
 import com.wellsfargo.batch5.pms.exception.PMSException;
@@ -28,7 +31,8 @@ public class UserDetailsImplimentation  implements UserDetailsService{
 	@Override
 	public List<UserDetailsDto> getAll() throws PMSException {
 		
-		return null;
+		return userdetailsrepo.findAll().stream().map(e->EMParser.parse(e)).collect(Collectors.toList());
+
 	}
 
 	@Override

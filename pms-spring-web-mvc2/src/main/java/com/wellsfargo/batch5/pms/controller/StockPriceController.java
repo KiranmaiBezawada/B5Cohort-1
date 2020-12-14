@@ -10,42 +10,36 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.wellsfargo.batch5.pms.dto.StockPriceDto;
 import com.wellsfargo.batch5.pms.dto.UserDetailsDto;
 import com.wellsfargo.batch5.pms.exception.PMSException;
+import com.wellsfargo.batch5.pms.service.StockPriceService;
 import com.wellsfargo.batch5.pms.service.UserDetailsService;
 
 
 @Controller
-public class UserController {
+public class StockPriceController {
 	
 	@Autowired
-	private UserDetailsService userDetailsService;
+	private StockPriceService stockPriceService;
 	
-	@GetMapping({"","/","Home"})
-	public String LoginAction() {
-		return "index";
-	}
 
-	@GetMapping("/register")
+	@GetMapping("/registerNewStock")
 	public ModelAndView registerAction() {
 
-		ModelAndView mv = new ModelAndView("/register_form","user",new UserDetailsDto());
+		ModelAndView mv = new ModelAndView("backOfficeUser/stockForm","stock",new StockPriceDto());
 		return mv;
 	}
 	
-	@PostMapping("/add")
-	public ModelAndView addUserAction(@ModelAttribute("user") @Valid UserDetailsDto user,BindingResult result) throws PMSException {
+	@PostMapping("/addStockDetails")
+	public ModelAndView addStockAction(@ModelAttribute("stock") @Valid StockPriceDto stock,BindingResult result) throws PMSException {
 		  ModelAndView mv=null;
-		  userDetailsService.add(user);
+		  stockPriceService.add(stock);
 		  mv = new ModelAndView("redirect:/Home");
 		  return mv;
 	}
 	
 	
-	@GetMapping("/getall")
-	public ModelAndView booksAction() throws PMSException {
-		return new ModelAndView("admin/userList","users",userDetailsService.getAll());
-	}
-	
+		
 	
 }

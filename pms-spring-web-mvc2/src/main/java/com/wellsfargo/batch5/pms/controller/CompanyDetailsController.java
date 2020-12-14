@@ -10,42 +10,39 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.wellsfargo.batch5.pms.dto.CompanyDetailsDto;
 import com.wellsfargo.batch5.pms.dto.UserDetailsDto;
 import com.wellsfargo.batch5.pms.exception.PMSException;
+import com.wellsfargo.batch5.pms.service.CompanyDetailsService;
 import com.wellsfargo.batch5.pms.service.UserDetailsService;
 
 
 @Controller
-public class UserController {
+public class CompanyDetailsController {
 	
 	@Autowired
-	private UserDetailsService userDetailsService;
+	private CompanyDetailsService companyDetailsService;
 	
-	@GetMapping({"","/","Home"})
-	public String LoginAction() {
-		return "index";
-	}
-
-	@GetMapping("/register")
+	@GetMapping("/registerNewCompany")
 	public ModelAndView registerAction() {
 
-		ModelAndView mv = new ModelAndView("/register_form","user",new UserDetailsDto());
+		ModelAndView mv = new ModelAndView("backOfficeUser/companyForm","company",new CompanyDetailsDto());
 		return mv;
 	}
 	
-	@PostMapping("/add")
-	public ModelAndView addUserAction(@ModelAttribute("user") @Valid UserDetailsDto user,BindingResult result) throws PMSException {
+	@PostMapping("/addCompanyDetails")
+	public ModelAndView addCompanyAction(@ModelAttribute("company") @Valid CompanyDetailsDto company,BindingResult result) throws PMSException {
 		  ModelAndView mv=null;
-		  userDetailsService.add(user);
+		  companyDetailsService.add(company);
 		  mv = new ModelAndView("redirect:/Home");
 		  return mv;
 	}
 	
 	
-	@GetMapping("/getall")
+	/*@GetMapping("/getall")
 	public ModelAndView booksAction() throws PMSException {
 		return new ModelAndView("admin/userList","users",userDetailsService.getAll());
-	}
+	}*/
 	
 	
 }
