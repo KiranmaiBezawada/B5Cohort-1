@@ -14,7 +14,6 @@ import org.hibernate.annotations.ColumnDefault;
 @Table(name="stockprice")
 public class StockPriceEntity{
 	
-	
 	@Id
   /*  @Column(length=5, nullable=false,name="stockId")
 	@ColumnDefault("30000")
@@ -33,16 +32,13 @@ public class StockPriceEntity{
 	@Column(name="stock_price_time")
 	private String StockPriceatSpecificTime;
 	
-
-		//foreign key
-		@ManyToOne
-		private CompanyDetailsEntity company;
+    //foreign key
+	@ManyToOne
+	private CompanyDetailsEntity company;
 	
 	public StockPriceEntity() {
 		
 	}
-
-	
 
 	public StockPriceEntity(Long companyCode, String companyIPO, String companyName, String companySector,
 			String companyOperations, Integer shareCount, Integer openSharePrice, Integer trunOver, Long stockId,

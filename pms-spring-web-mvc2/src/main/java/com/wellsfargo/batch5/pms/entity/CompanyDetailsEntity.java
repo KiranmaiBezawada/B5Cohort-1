@@ -16,8 +16,6 @@ import javax.persistence.Table;
 
 import org.hibernate.annotations.ColumnDefault;
 
-
-
 @Entity
 @Table(name="CompanyDetails")
 public class CompanyDetailsEntity {

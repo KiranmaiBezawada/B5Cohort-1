@@ -2,7 +2,7 @@
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <html>
 	<head>
-		<title>Add Stock Details</title>
+		<title>Add Commodity Details</title>
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -11,38 +11,35 @@
 	<body>
 	<%--	<jsp:include page="/header"/> --%>
 		<section class="container-fluid p-4">
-		<h3>New Stock</h3>
+		<h3>New Commodity</h3>
 			<div class="col-sm-5">
-			<form:form action="addStockDetails"
-				method="POST" modelAttribute="stock" class="form">
-			 
+			<form:form action="addCommodityDetails"
+				method="POST" modelAttribute="commodity" class="form">
+ 
 				<div class="form-control-group">
-					<form:label path="stockId" class="form-control-label">Stock Code</form:label>
-					<form:input path="stockId" class="form-control" type="text"/>
+					<form:label path="commodityID" class="form-control-label">Commodity Code</form:label>
+					<form:input path="commodityID" class="form-control" type="text"/>
 				</div>
 				<div class="form-control-group">
-					<form:label path="stockExchange" class="form-control-label">Stock Exchange</form:label>
-					<form:input path="stockExchange" class="form-control" type="text"/>
-				</div>
-				
-				<div class="form-control-group">
-					<form:label path="currentPrice" class="form-control-label">currentPrice</form:label>
-					<form:input path="currentPrice" class="form-control" type="text"/>
+					<form:label path="commodityType" class="form-control-label">Commodity Type</form:label>
+					<form:select path="commodityType" class="form-control" id="commodityType">
+						<option>Gold</option>
+						<option>Silver</option>
+					</form:select>
 				</div>
 				
 				<div class="form-control-group">
-					<form:label path="dateoftheStockPrice" class="form-control-label">Date</form:label>
-					<form:input path="dateoftheStockPrice" class="form-control" type="date"/>
+					<form:label path="commodityPrice" class="form-control-label">Commodity Price</form:label>
+					<form:input path="commodityPrice" class="form-control" type="text"/>
 				</div>
 				
 				<div class="form-control-group">
-					<form:label path="stockPriceatSpecificTime" class="form-control-label">stockPriceatSpecificTime</form:label>
-					<form:input path="stockPriceatSpecificTime" class="form-control" type="text"/>
+					<form:label path="date" class="form-control-label">date</form:label>
+					<form:input path="date" class="form-control" type="date"/>
 				</div>
 				
-			
 				<div class="form-control-group">
-					<button class="btn btn-primary">Add Company Details</button>
+					<button class="btn btn-primary">Add Commodity Details</button>
 				</div>
 			</form:form>
 			<a href="/pms"><input type="button" value="Home"></a>

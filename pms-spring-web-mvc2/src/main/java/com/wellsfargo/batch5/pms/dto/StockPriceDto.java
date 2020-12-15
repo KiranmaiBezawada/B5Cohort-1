@@ -37,8 +37,6 @@ public class StockPriceDto{
 		
 	}
 
-	
-
 	public StockPriceDto(Long companyCode, String companyIPO, String companyName, String companySector,
 			String companyOperations, Integer shareCount, Integer openSharePrice, Integer trunOver, Long stockId,
 			String stockExchange, Integer currentPrice, String dateoftheStockPrice, String stockPriceatSpecificTime) {

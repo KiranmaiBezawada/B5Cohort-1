@@ -3,9 +3,11 @@ package com.wellsfargo.batch5.pms.util;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import com.wellsfargo.batch5.pms.dto.CommoditiesDto;
 import com.wellsfargo.batch5.pms.dto.CompanyDetailsDto;
 import com.wellsfargo.batch5.pms.dto.StockPriceDto;
 import com.wellsfargo.batch5.pms.dto.UserDetailsDto;
+import com.wellsfargo.batch5.pms.entity.CommoditiesEntity;
 import com.wellsfargo.batch5.pms.entity.CompanyDetailsEntity;
 import com.wellsfargo.batch5.pms.entity.StockPriceEntity;
 import com.wellsfargo.batch5.pms.entity.UserDetailsEntity;
@@ -42,6 +44,23 @@ public class EMParser {
 		target.setBonus(2000);
 		target.setRegistereddate("22-04-1990");
 		target.setRole("User");
+		return target;
+	}
+	
+	
+	public static UserDetailsEntity parse1(UserDetailsDto source) {
+		UserDetailsEntity target = new UserDetailsEntity();
+		target.setAddress(source.getAddress());
+		target.setFirstname(source.getFirstname());
+		target.setLastName(source.getLastName());
+		target.setDob(source.getDob());
+		target.setGender(source.getGender());
+		target.setPassword(source.getPassword());
+		target.setUsermobilenumber(source.getUsermobilenumber());
+		//target.setRegistereddate(source.getRegistereddate());
+		target.setBonus(2000);
+		target.setRegistereddate("22-04-1990");
+		target.setRole("Back Office");
 		return target;
 	}
 	
@@ -89,4 +108,30 @@ public class EMParser {
 		target.setStockPriceatSpecificTime(source.getStockPriceatSpecificTime());
 		return target;			
 	}
+	
+	
+	public static CommoditiesDto parse(CommoditiesEntity source) {
+		CommoditiesDto target = new CommoditiesDto();
+		target.setCommodityID(source.getCommodityID());
+		target.setCommodityPrice(source.getCommodityPrice());
+		target.setCommodityType(source.getCommodityType());
+		target.setDate(source.getDate());
+		return target;
+		
+
+		
+	}
+	
+	public static CommoditiesEntity parse(CommoditiesDto source) {
+		CommoditiesEntity target = new CommoditiesEntity();
+		target.setCommodityID(source.getCommodityID());
+		target.setCommodityPrice(source.getCommodityPrice());
+		target.setCommodityType(source.getCommodityType());
+		target.setDate(source.getDate());
+		return target;
+		
+
+		
+	}
+	
 }	

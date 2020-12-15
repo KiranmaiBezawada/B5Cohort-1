@@ -14,5 +14,9 @@
 <a href ="registerNewCompany">AddCompanyDetails</a>
 <span>|</span>
 <a href ="registerNewStock">AddStockDetails</a>
+<span>|</span>
+<a href ="registerNewCommodity">AddCommodityDetails</a>
+<span>|</span>
+<a href ="registerBackOfficeUser">AddBackOfficeUserDetails</a>
 <hr/>
 </nav>
